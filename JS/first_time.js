@@ -1,4 +1,6 @@
-alert("Its working");
-
-console.log("Hello World from javascript", 23, true);
-console.error("Oh noooo!!!")
+if (true == 1){
+    console.log("Not exactly true but ....")
+}
+else{
+    console.log("**")
+}
