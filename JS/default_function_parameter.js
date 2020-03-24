@@ -1,3 +1,7 @@
-const multiply = (a, b=1) => a*b
+const multiply = (a, b) => {
+    let result = typeof b == 'number' ? a*b : console.log("Thats not a number")
+    return result
+}
 
-console.log(multiply(2))
+console.log(multiply(2, 1))
+
