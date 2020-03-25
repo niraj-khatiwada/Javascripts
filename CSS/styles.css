@@ -1,0 +1,47 @@
+*, ::before, ::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#beer{
+    width: 400px;
+} 
+
+.foot{
+    border: 3px solid red;
+}
+
+.heading{
+    background-color: green;
+}
+
+#main{
+    height: 10vh;
+    margin-top: 5rem;
+    display: block;
+}
+.main{
+    width: 50vw;
+}
+
+.form{
+    text-align: center;
+    margin-top: 3rem;
+}
+.essentials{
+    text-align: center;
+    margin: 3rem;
+}
+.youtube{
+    font-size: 3rem;
+    text-decoration: none;
+}
+
+.todos {
+    font-size: 2rem;
+}
+
+.done{
+    color: red;
+    text-decoration: line-through;
+}
