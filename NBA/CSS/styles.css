@@ -1,0 +1,26 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    /* margin: 0; */
+}
+
+.container{
+    margin: 2rem auto;
+
+}
+.loser{
+    background-color: #f35588;
+}
+
+.winner{
+    background: #75daad;
+}
+li{
+    font-size: 20px;
+}
+div h1{
+    text-align: center;
+}
+
+ul li{
+    list-style: none;
+}
