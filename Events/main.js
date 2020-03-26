@@ -146,7 +146,16 @@ const form = document.querySelector("form")
 form.addEventListener("input", function (evt) {
     evt.preventDefault()
     console.log(evt)
-    
+    if (document.querySelector(".newDiv")) {
+        alert("New Div")
+        const extraDivs = document.querySelectorAll(".newDiv")
+        console.log(extraDivs)
+        for ( let i in extraDivs) {
+            if (i != 0){
+                extraDivs[i].removeChild
+            }
+        }
+    }
     const name = document.querySelector("#name")
     const tel = document.querySelector("#number")
     const money = document.querySelector("#money")
@@ -155,8 +164,7 @@ form.addEventListener("input", function (evt) {
     const arrayList = [name, tel, money, male, female]
     const newDiv = document.createElement("div")
     newDiv.className = "newDiv"
-    console.dir(male, female)
-    document.body.appendChild(newDiv)
+    form.insertAdjacentElement("afterend", newDiv)
     for (let item of arrayList) {
         const h1 = document.createElement("h1")
         if (item == male || item == female) {
