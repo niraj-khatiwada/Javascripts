@@ -113,28 +113,78 @@ const colors = ["red", "green", "blue", "teal", "yellow", "maroon", "pink", "ora
 //     console.log("keypress")
 // })
 
-const todoList = function () {
-    const input = document.querySelector("input");
-    const ul = document.querySelector("ul");
-    const h1 = document.querySelector("h2")
-    input.addEventListener("keydown", function (evt) {
-        if (evt.code === "Enter"){
-            console.log("Enter pressed");
-            if (input.value) {
-                h1.innerText = "Name:"
-                h1.style.color = "black"
-                const newLi = document.createElement("li");
-                ul.appendChild(newLi);
-                newLi.innerText = input.value;
-                input.value = "";
-            } 
+// const todoList = function () {
+//     const input = document.querySelector("input");
+//     const ul = document.querySelector("ul");
+//     const h1 = document.querySelector("h2")
+//     input.addEventListener("keydown", function (evt) {
+//         if (evt.code === "Enter"){
+//             console.log("Enter pressed");
+//             if (input.value) {
+//                 h1.innerText = "Name:"
+//                 h1.style.color = "black"
+//                 const newLi = document.createElement("li");
+//                 ul.appendChild(newLi);
+//                 newLi.innerText = input.value;
+//                 input.value = "";
+//             } 
+//             else {
+//                 h1.innerText = "Enter some text"
+//                 h1.style.color = "red"
+//             }
+//         }
+//     })
+    
+// }
+
+// todoList()
+
+//Prevent Default Form Events
+
+
+const form = document.querySelector("form")
+form.addEventListener("input", function (evt) {
+    evt.preventDefault()
+    console.log(evt)
+    
+    const name = document.querySelector("#name")
+    const tel = document.querySelector("#number")
+    const money = document.querySelector("#money")
+    const male = document.querySelector("#male")
+    const female = document.querySelector("#female")
+    const arrayList = [name, tel, money, male, female]
+    const newDiv = document.createElement("div")
+    newDiv.className = "newDiv"
+    console.dir(male, female)
+    document.body.appendChild(newDiv)
+    for (let item of arrayList) {
+        const h1 = document.createElement("h1")
+        if (item == male || item == female) {
+            if (item == male){
+
+                if (item.checked == true) {
+    
+                    h1.innerText = "Male"
+                    newDiv.appendChild(h1)
+                }
+            }
             else {
-                h1.innerText = "Enter some text"
-                h1.style.color = "red"
+                if (item.checked == true) {
+    
+                    h1.innerText = "Female"
+                    newDiv.appendChild(h1)
+                }
             }
         }
-    })
-    
-}
 
-todoList()
+        else {
+            h1.innerText = item.value
+            newDiv.appendChild(h1)
+        }
+        
+    }
+    // alert("Form Submitted") 
+})
+
+
+
