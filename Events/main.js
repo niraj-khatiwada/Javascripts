@@ -65,36 +65,76 @@ const colors = ["red", "green", "blue", "teal", "yellow", "maroon", "pink", "ora
 // }
 // itemBoxes()
 
-const colorBoxes = function () {
-    const mainDiv = document.createElement("div")
-    mainDiv.style.display = "flex"
+// const colorBoxes = function () {
+//     const mainDiv = document.createElement("div")
+//     mainDiv.style.display = "flex"
 
-    document.body.appendChild(mainDiv)
-    for (let item of colors) {
-        const childDiv = document.createElement("div")
-        childDiv.style.backgroundColor = item
-        childDiv.className = "childDiv"
-        childDiv.style.width = "100px"
-        childDiv.style.height = "100px"
-        mainDiv.appendChild(childDiv)
-    }
+//     document.body.appendChild(mainDiv)
+//     for (let item of colors) {
+//         const childDiv = document.createElement("div")
+//         childDiv.style.backgroundColor = item
+//         childDiv.className = "childDiv"
+//         childDiv.style.width = "100px"
+//         childDiv.style.height = "100px"
+//         mainDiv.appendChild(childDiv)
+//     }
     
-};
+// };
 
-const spacePressed = function () {
-    const _childDiv = document.querySelectorAll(".childDiv");
-    console.log(_childDiv)
-    document.body.addEventListener("keypress", function (evt) {
-        if (evt.code === "Space") {
-            const H1 = document.querySelector("h1")
-            const randomColor = colors[Math.ceil(Math.random() * colors.length)]
-            H1.style.color = randomColor
+// const spacePressed = function () {
+//     for (let i of colors) {
+//     document.body.addEventListener("keypress", function (evt) {
+//         if (evt.code === "Space") {
+//             const H1 = document.querySelector("h1")
+//             // const randomColor = colors[Math.ceil(Math.random() * colors.length)]
+//             H1.style.color = i
 
+//         }
+//     })
+// }
+// }
+
+
+
+// colorBoxes()
+// spacePressed()
+
+//-------------------Key Events------------------------
+
+// const keydown = document.querySelector("input")
+// keydown.addEventListener("keydown", function (evt) {
+//     console.log("keydown")
+//     console.log(evt)
+// })
+// keydown.addEventListener("keyup", function (evt) {
+//     console.log("keyup")
+// })
+// keydown.addEventListener("keypress", function (evt) {
+//     console.log("keypress")
+// })
+
+const todoList = function () {
+    const input = document.querySelector("input");
+    const ul = document.querySelector("ul");
+    const h1 = document.querySelector("h2")
+    input.addEventListener("keydown", function (evt) {
+        if (evt.code === "Enter"){
+            console.log("Enter pressed");
+            if (input.value) {
+                h1.innerText = "Name:"
+                h1.style.color = "black"
+                const newLi = document.createElement("li");
+                ul.appendChild(newLi);
+                newLi.innerText = input.value;
+                input.value = "";
+            } 
+            else {
+                h1.innerText = "Enter some text"
+                h1.style.color = "red"
+            }
         }
     })
+    
 }
 
-
-
-colorBoxes()
-spacePressed()
+todoList()
