@@ -142,83 +142,97 @@ const colors = ["red", "green", "blue", "teal", "yellow", "maroon", "pink", "ora
 //Prevent Default Form Events
 
 
-const form = document.querySelector("form")
-form.addEventListener("input", function (evt) {
-    evt.preventDefault()
-    console.log(evt)
-    // if (document.querySelector(".newDiv")) {
-    //     alert("New Div")
-    //     const extraDivs = document.querySelectorAll(".newDiv")
-    //     console.log(extraDivs)
-    //     for ( let i in extraDivs) {
-    //         if (i != 0){
-    //             extraDivs[i].removeChild
-    //         }
-    //     }
-    // }
-    const name = document.querySelector("#name")
-    const tel = document.querySelector("#number")
-    const money = document.querySelector("#money")
-    const male = document.querySelector("#male")
-    const female = document.querySelector("#female")
-    const arrayList = [name, tel, money, male, female]
-    const newDiv = document.createElement("div")
-    newDiv.className = "newDiv"
-    form.insertAdjacentElement("afterend", newDiv)
-    for (let item of arrayList) {
-        if (newDiv.length == 1){
-            const h1 = document.createElement("h1")
-            if (item == male || item == female) {
-                if (item == male){
+// const form = document.querySelector("form")
+// form.addEventListener("input", function (evt) {
+//     evt.preventDefault()
+//     console.log(evt)
+//     // if (document.querySelector(".newDiv")) {
+//     //     alert("New Div")
+//     //     const extraDivs = document.querySelectorAll(".newDiv")
+//     //     console.log(extraDivs)
+//     //     for ( let i in extraDivs) {
+//     //         if (i != 0){
+//     //             extraDivs[i].removeChild
+//     //         }
+//     //     }
+//     // }
+//     const name = document.querySelector("#name")
+//     const tel = document.querySelector("#number")
+//     const money = document.querySelector("#money")
+//     const male = document.querySelector("#male")
+//     const female = document.querySelector("#female")
+//     const arrayList = [name, tel, money, male, female]
+//     const newDiv = document.createElement("div")
+//     newDiv.className = "newDiv"
+//     form.insertAdjacentElement("afterend", newDiv)
+//     for (let item of arrayList) {
+//         if (newDiv.length == 1){
+//             const h1 = document.createElement("h1")
+//             if (item == male || item == female) {
+//                 if (item == male){
 
-                    if (item.checked == true) {
+//                     if (item.checked == true) {
         
-                        h1.innerText = "Male"
-                        newDiv.appendChild(h1)
-                    }
-                }
-                else {
-                    if (item.checked == true) {
+//                         h1.innerText = "Male"
+//                         newDiv.appendChild(h1)
+//                     }
+//                 }
+//                 else {
+//                     if (item.checked == true) {
         
-                        h1.innerText = "Female"
-                        newDiv.appendChild(h1)
-                    }
-                }
-            }
+//                         h1.innerText = "Female"
+//                         newDiv.appendChild(h1)
+//                     }
+//                 }
+//             }
 
-            else {
-                h1.innerText = item.value
-                newDiv.appendChild(h1)
-            }
-            }
-        else {
-            if (item == male || item == female) {
-                if (item == male){
+//             else {
+//                 h1.innerText = item.value
+//                 newDiv.appendChild(h1)
+//             }
+//             }
+//         else {
+//             if (item == male || item == female) {
+//                 if (item == male){
 
-                    if (item.checked == true) {
+//                     if (item.checked == true) {
         
-                        h1.innerText = "Male"
-                        // newDiv.appendChild(h1)
-                    }
-                }
-                else {
-                    if (item.checked == true) {
+//                         h1.innerText = "Male"
+//                         // newDiv.appendChild(h1)
+//                     }
+//                 }
+//                 else {
+//                     if (item.checked == true) {
         
-                        h1.innerText = "Female"
-                        // newDiv.appendChild(h1)
-                    }
-                }
-            }
+//                         h1.innerText = "Female"
+//                         // newDiv.appendChild(h1)
+//                     }
+//                 }
+//             }
 
-            else {
-                h1.innerText = item.value
-                // newDiv.appendChild(h1)
-            }
-        }
+//             else {
+//                 h1.innerText = item.value
+//                 // newDiv.appendChild(h1)
+//             }
+//         }
         
-    }
-    // alert("Form Submitted") 
-})
+//     }
+//     // alert("Form Submitted") 
+// })
 
 
 
+const moveMe = document.querySelector("button")
+
+for (let i=1; i<10; i++){
+
+    setInterval(() => {
+        move()
+    }, 1000)
+}
+
+
+const move = function () {
+    moveMe.style.transform = `translateX(100px)` 
+
+}
