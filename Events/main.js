@@ -146,16 +146,16 @@ const form = document.querySelector("form")
 form.addEventListener("input", function (evt) {
     evt.preventDefault()
     console.log(evt)
-    if (document.querySelector(".newDiv")) {
-        alert("New Div")
-        const extraDivs = document.querySelectorAll(".newDiv")
-        console.log(extraDivs)
-        for ( let i in extraDivs) {
-            if (i != 0){
-                extraDivs[i].removeChild
-            }
-        }
-    }
+    // if (document.querySelector(".newDiv")) {
+    //     alert("New Div")
+    //     const extraDivs = document.querySelectorAll(".newDiv")
+    //     console.log(extraDivs)
+    //     for ( let i in extraDivs) {
+    //         if (i != 0){
+    //             extraDivs[i].removeChild
+    //         }
+    //     }
+    // }
     const name = document.querySelector("#name")
     const tel = document.querySelector("#number")
     const money = document.querySelector("#money")
@@ -166,28 +166,54 @@ form.addEventListener("input", function (evt) {
     newDiv.className = "newDiv"
     form.insertAdjacentElement("afterend", newDiv)
     for (let item of arrayList) {
-        const h1 = document.createElement("h1")
-        if (item == male || item == female) {
-            if (item == male){
+        if (newDiv.length == 1){
+            const h1 = document.createElement("h1")
+            if (item == male || item == female) {
+                if (item == male){
 
-                if (item.checked == true) {
-    
-                    h1.innerText = "Male"
-                    newDiv.appendChild(h1)
+                    if (item.checked == true) {
+        
+                        h1.innerText = "Male"
+                        newDiv.appendChild(h1)
+                    }
+                }
+                else {
+                    if (item.checked == true) {
+        
+                        h1.innerText = "Female"
+                        newDiv.appendChild(h1)
+                    }
                 }
             }
+
             else {
-                if (item.checked == true) {
-    
-                    h1.innerText = "Female"
-                    newDiv.appendChild(h1)
+                h1.innerText = item.value
+                newDiv.appendChild(h1)
+            }
+            }
+        else {
+            if (item == male || item == female) {
+                if (item == male){
+
+                    if (item.checked == true) {
+        
+                        h1.innerText = "Male"
+                        // newDiv.appendChild(h1)
+                    }
+                }
+                else {
+                    if (item.checked == true) {
+        
+                        h1.innerText = "Female"
+                        // newDiv.appendChild(h1)
+                    }
                 }
             }
-        }
 
-        else {
-            h1.innerText = item.value
-            newDiv.appendChild(h1)
+            else {
+                h1.innerText = item.value
+                // newDiv.appendChild(h1)
+            }
         }
         
     }
