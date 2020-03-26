@@ -31,33 +31,59 @@
 // console.log("Request sent");
 
 
-fetch("https://swapi.co/api/planets/")
+// fetch("https://swapi.co/api/planets/")
+// .then((res) => {
+//     if (res.status != 200) {
+//         throw new Error(`Status code error ${res.status}`)
+//     }
+//     return res.json()
+// })
+// .then((res) => {
+//     for (let planet of res.results){
+//         console.log(planet.name)
+//     }
+//     return res.next
+// })
+// .then((res) => {return fetch(res)})
+// .then((res) => {
+//     if (!res.ok){
+//         throw new Error(`Status code error ${res.status}`)
+//     }
+//     return res.json()
+//     })
+// .then( (res) => {
+//     for (let planet of res.results){
+//         console.log(planet.name)
+//     }
+// } )
+
+
+// // .then((res) => {console.log(res.json())})
+
+// .catch( (err) => {console.log("Something went wrong", err)})
+
+
+axios.get("https://swapi.co/api/planets/")
 .then((res) => {
-    if (res.status != 200) {
-        throw new Error(`Status code error ${res.status}`)
-    }
-    return res.json()
-})
-.then((res) => {
-    for (let planet of res.results){
+    // console.log(res)
+    for (let planet of res.data.results){
         console.log(planet.name)
     }
-    return res.next
+    return res.data.next
 })
-.then((res) => {♦return fetch(res)})
 .then((res) => {
-    if (!res.ok){
-        throw new Error(`Status code error ${res.status}`)
-    }
-    return res.json()
-    })
-.then( (res) => {
-    for (let planet of res.results){
+    // axios.get(res)
+    return axios.get(res)
+})
+.then((res) => {
+    for (let planet of res.data.results){
         console.log(planet.name)
     }
-} )
+    return res.data.next
+})
+.catch((err) => {console.log("Error", err)})
 
 
-// .then((res) => {console.log(res.json())})
-
-.catch( (err) => {console.log("Something went wrong", err)})
+const fetchURL = function (url = "https://swapi.co/api/planets/") {
+    return axios.get(url)
+}
