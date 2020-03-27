@@ -33,7 +33,7 @@ class Student {
     }
 
     printDetails (name, roll, gen) {
-        console.log(`${name} of roll number ${roll} is ${gen}`)
+        console.log(`${name} of roll number %${roll} is ${gen}`)
     }
 }
 
