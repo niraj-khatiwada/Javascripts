@@ -87,18 +87,161 @@
 // }
 
 
-const letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// const letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-const input = "the quick brown fox jumps over the lazy dog";
+// const input = "the quick brown fox jumps over the lazy dog";
 
 
-for ( let i of input) {
-    console.log(i)
-    console.log(letters.includes(i))
-    if (letters.includes(i)) {
-        letters.splice(letters.indexOf(i), 1)
-        console.log(letters)
-    }
-    
+// for ( let i of input) {
+//     console.log(i)
+//     console.log(letters.includes(i))
+//     if (letters.includes(i)) {
+//         letters.splice(letters.indexOf(i), 1)
+//         console.log(letters)
+//     }
+
+// }
+// (letters.length === 0) ? console.log("Is panagram") : console.log("Is not a panagram"); 
+
+
+// const val = function () {
+//     const p = "asjbajhsb"
+// }
+
+
+// let name = "asjbahsb"
+// let name = "ajdbhjbbahbhj"
+
+
+
+// function color(x) {
+//     return function(n) {
+//         return x*n
+//     }
+// }
+
+// const color_ = color(3)
+// console.log(color_(2)) 
+// console.log(a)
+// const a; 
+// let a = 2
+
+
+// const array = 
+
+const array = [1, 2, 3, 4, 5, 100, 6]
+
+// array2 = array.forEach((value, index, array) => {
+//     return value**2
+// })
+
+
+// array2 = array.map((value, index) => {
+//     return {name: value}
+// })
+// console.log(array2)
+
+
+
+// array2 = array.filter((value) => (
+//     value%2 ===0
+//     ))
+// console.log(array2)
+
+
+// array2 = array.some((value) => (
+//     value%2 ===0
+//     ))
+// console.log(array2)
+
+// a = array.reduce((preVal, currVal) => {
+//     return Math.min(preVal, currVal)
+// })
+
+// console.log(a)
+
+const votes = ['y', 'y', 'n', 'n', 'y', 'n', 'y', 'y', 'y', 'n', 'n', 'y', 'n']
+
+// const results = votes.reduce((preVal, currVal) => {
+//     (preVal[currVal]) ? preVal[currVal]++ : (preVal[currVal] = 1);
+//     return preVal
+// }, {})
+
+// console.log(results)
+
+
+const books = [{
+    title: 'Good Omens',
+    authors: ['Terry Pratchett', 'Neil Gaiman'],
+    rating: 4.25,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'Changing My Mind',
+    authors: ['Zadie Smith'],
+    rating: 3.83,
+    genres: ['nonfiction', 'essays']
+},
+{
+    title: 'Bone: The Complete Edition',
+    authors: ['Jeff Smith'],
+    rating: 4.42,
+    genres: ['fiction', 'graphic novel', 'fantasy']
+},
+{
+    title: 'American Gods',
+    authors: ['Neil Gaiman'],
+    rating: 4.11,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'A Gentleman in Moscow',
+    authors: ['Amor Towles'],
+    rating: 4.36,
+    genres: ['fiction', 'historical fiction']
+},
+{
+    title: 'The Name of the Wind',
+    authors: ['Patrick Rothfuss'],
+    rating: 4.54,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'The Overstory',
+    authors: ['Richard Powers'],
+    rating: 4.19,
+    genres: ['fiction', 'short stories']
+},
+{
+    title: 'A Truly Horrible Book',
+    authors: ['Xavier Time'],
+    rating: 2.18,
+    genres: ['fiction', 'garbage']
+},
+{
+    title: 'The Way of Kings',
+    authors: ['Brandon Sanderson'],
+    rating: 4.65,
+    genres: ['fantasy', 'epic']
+},
+{
+    title: 'Lord of the flies',
+    authors: ['William Golding'],
+    rating: 3.67,
+    genres: ['fiction']
 }
-(letters.length === 0) ? console.log("Is panagram") : console.log("Is not a panagram");
+]
+
+const results = books.reduce((preVal, currVal) => {
+    const rating =Math.floor(currVal.rating)
+    if (preVal[rating]){
+        preVal[rating].push(currVal)
+    }
+    else{
+        preVal[rating] = []
+    }
+   
+    return preVal
+}, {})
+
+console.log(results)
