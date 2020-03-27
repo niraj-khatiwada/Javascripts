@@ -60,17 +60,45 @@
 // console.log(details[0].name)
 
 
-const obj1 =  {
-    SLC: "asjhhbhjasb",
-    Plus2: "asjkbhjasbhj",
-    Bachelor: "dfghbdhfjcb"
+// const obj1 =  {
+//     SLC: "asjhhbhjasb",
+//     Plus2: "asjkbhjasbhj",
+//     Bachelor: "dfghbdhfjcb"
+// }
+
+// const obj2 = obj1
+
+// obj1 = {}
+
+// obj2.SLC = 12
+// console.log(obj2)
+// console.log(obj1)
+
+// let a = 1
+// while (a > 0) {
+//     a++
+//     if (a===9){
+//         break;
+//     }
+//     else if (a===6) {
+//         continue;
+//     }
+//     console.log(a)
+// }
+
+
+const letters = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+const input = "the quick brown fox jumps over the lazy dog";
+
+
+for ( let i of input) {
+    console.log(i)
+    console.log(letters.includes(i))
+    if (letters.includes(i)) {
+        letters.splice(letters.indexOf(i), 1)
+        console.log(letters)
+    }
+    
 }
-
-const obj2 = obj1
-
-obj1 = {}
-
-obj2.SLC = 12
-console.log(obj2)
-console.log(obj1)
-
+(letters.length === 0) ? console.log("Is panagram") : console.log("Is not a panagram");
