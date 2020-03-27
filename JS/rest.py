@@ -5,4 +5,4 @@ def nummbers(x, y, *num, z):
 # print(nummbers(1, 2, 3, 4, z = 5))
 
 a, b, *lists = {"Name": "Niraj Khatiwada", "Age": 23, "Education": "Engineering"}
-print(a, b,)
+print(a, b,)    
