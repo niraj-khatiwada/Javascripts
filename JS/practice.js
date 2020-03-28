@@ -341,21 +341,46 @@
 // const details = {[name]:name, [age]:age}
 // console.log(details)
 
-books = {
-        title: 'Lord of the flies',
-        authors: ['William Golding'],
-        rating: 3.67,
-        genres: ['fiction']
-    }
+// books = {
+//         title: 'Lord of the flies',
+//         authors: ['William Golding'],
+//         rating: 3.67,
+//         genres: ['fiction']
+//     }
 
-const results = function (books, ...params) {
-    return {...books, extra: params.reduce((preVal, currVal) => {
-        if (!preVal[currVal]){
-            preVal[currVal] = currVal
-        }
-        return preVal
-    }, {}) }
+// const results = function (books, ...params) {
+//     return {...books, extra: params.reduce((preVal, currVal) => {
+//         if (!preVal[currVal]){
+//             preVal[currVal] = currVal
+//         }
+//         return preVal
+//     }, {}) }
     
-}
+// }
 
-console.log(results( books, "Niraj Khatiwada", 23, `5'6"`))
+// console.log(results( books, "Niraj Khatiwada", 23, `5'6"`))
+
+
+// const obj = {
+//     name() {console.log(this.lname)},
+//     lname : "Khatiwada"
+// }
+
+
+
+// const obj2 = {
+//     sum:function(a, b){return a+b},
+//     average(a, b) {return this.sum(a,b)/2}
+// }
+
+// console.log(obj2.average(3,4))
+
+// function randomColor() {
+//     return setInterval(() => {
+//         const colors = ["red", "white", "yellow", "green", "teal", "maroon", "blue"]
+//         const rand = Math.ceil(Math.random() * colors.length)
+//         return document.body.style.backgroundColor = colors[rand]
+//     }, 1000)
+// }
+
+// randomColor()
