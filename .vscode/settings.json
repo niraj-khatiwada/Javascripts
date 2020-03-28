@@ -1,3 +1,42 @@
+// {
+//     "python.pythonPath": "C:\\Users\\niraj\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe"
+// }
+
 {
-    "python.pythonPath": "C:\\Users\\niraj\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe"
+    "editor.accessibilityPageSize": 15,
+    "editor.fontSize": 15,
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "files.associations": {
+        "*.html": "html",
+        "*.py": "python"
+    },
+    "files.autoSave": "afterDelay",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "python.pythonPath": "C:\\Users\\niraj\\Anaconda3\\envs\\virtual workspace",
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.gist": "d673b33f654f6e63d4a262ac3cfd6780",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": -1,
+    "workbench.iconTheme": "material-icon-theme",
+    "window.openFoldersInNewWindow": "on",
+    "html-css-class-completion.enableEmmetSupport": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.jediEnabled": false,
+    "editor.suggest.maxVisibleSuggestions": 15,
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.letterSpacing": 1,
+    "terminal.integrated.minimumContrastRatio": 10,
+    "terminal.integrated.rendererType": "dom",
+    "terminal.integrated.copyOnSelection": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "eslint.alwaysShowStatus": true,
+    "editor.quickSuggestionsDelay": 1,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "standard.trace.server": "messages"
 }

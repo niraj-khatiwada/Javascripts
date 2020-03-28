@@ -203,7 +203,7 @@
 
 // console.log(sorted)
 
-//[100]1
+// [100]1
 
 // const arr3 = [[1, 2 ,3], 
 //             [4, 5 ,6], 
@@ -237,7 +237,7 @@
 // console.log({arr})
 
 
-//preVal = {},  [1, 2, 3]
+// preVal = {},  [1, 2, 3]
 // const rest = function (...nums) {
 //     return nums.reduce((preVal, currVal) => {
 //         if (!preVal[currVal]){
@@ -385,7 +385,7 @@
 
 // randomColor()
 
-const todo = document.querySelector(".todo")
+// const todo = document.querySelector(".todo")
 
 // todo.classList.add("done")
 // todo.classList.remove("done")
@@ -403,4 +403,68 @@ const todo = document.querySelector(".todo")
 // todo.removeChild(newli)
 
 
-todo.addEventListener("")
+// todo.addEventListener("mouseover", () => {
+//     alert("No  double clicking")
+// })
+// todo.addEventListener("dblclick", () => {
+//     alert("No  double clicking")
+// })
+
+// const color = ["red", "green", "blue", "orange", "teal"]
+// const title = document.querySelector(".title")
+
+// const changeColor = function (evt) {
+//     title.style.color = this.style.backgroundColor
+//     console.log(evt)
+// }
+
+// for (let i of color){
+//     const div = document.createElement("div")
+//     div.classList.add("color")
+//     div.style.backgroundColor = i
+//     document.body.prepend(div)
+//     div.addEventListener("keypress", changeColor)  
+    
+// }
+
+
+// document.body.addEventListener("keypress", () => {
+//     document.body.style.backgroundColor = 'red'
+// })
+
+
+// const form = document.querySelector(".form");
+
+
+
+// form.addEventListener("submit", (evt) => {
+//     return evt.preventDefault()
+//     console.log(input.value)
+// })
+
+
+const checkbox = document.querySelector("input[type='checkbox']")
+const div = document.createElement("div")
+div.style.width = "200px"
+div.style.height = "200px"
+div.style.backgroundColor = "blue"
+div.innerText = "Hello World"
+document.body.prepend(div)
+const input = document.querySelector("form > #name")
+
+checkbox.addEventListener("input", (evt) => {
+    div.innerText = checkbox.checked
+    console.log(evt)
+
+})
+
+const data = {}
+for (let item of [input, checkbox]){
+    item.addEventListener("input", (evt) => {
+    data[`${evt.type} ${evt.target.type} ${evt.target.name} ${evt.timeStamp}`] = item.value
+    })
+
+}
+
+
+
