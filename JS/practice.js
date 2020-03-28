@@ -384,3 +384,23 @@
 // }
 
 // randomColor()
+
+const todo = document.querySelector(".todo")
+
+// todo.classList.add("done")
+// todo.classList.remove("done")
+
+// todo.addEventListener("click", () => {
+
+//     todo.classList.toggle("done")
+// })
+
+// const newli = document.createElement("li")
+// newli.innerText = "asass"
+
+// todo.insertAdjacentElement("beforeend",newli)
+
+// todo.removeChild(newli)
+
+
+todo.addEventListener("")
