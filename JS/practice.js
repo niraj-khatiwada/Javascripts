@@ -129,7 +129,7 @@
 
 // const array = 
 
-const array = [1, 2, 3, 4, 5, 100, 6]
+// const array = [1, 2, 3, 4, 5, 100, 6]
 
 // array2 = array.forEach((value, index, array) => {
 //     return value**2
@@ -160,7 +160,7 @@ const array = [1, 2, 3, 4, 5, 100, 6]
 
 // console.log(a)
 
-const votes = ['y', 'y', 'n', 'n', 'y', 'n', 'y', 'y', 'y', 'n', 'n', 'y', 'n']
+// const votes = ['y', 'y', 'n', 'n', 'y', 'n', 'y', 'y', 'y', 'n', 'n', 'y', 'n']
 
 // const results = votes.reduce((preVal, currVal) => {
 //     (preVal[currVal]) ? preVal[currVal]++ : (preVal[currVal] = 1);
@@ -170,67 +170,6 @@ const votes = ['y', 'y', 'n', 'n', 'y', 'n', 'y', 'y', 'y', 'n', 'n', 'y', 'n']
 // console.log(results)
 
 
-// const books = [{
-//     title: 'Good Omens',
-//     authors: ['Terry Pratchett', 'Neil Gaiman'],
-//     rating: 4.25,
-//     genres: ['fiction', 'fantasy']
-// },
-// {
-//     title: 'Changing My Mind',
-//     authors: ['Zadie Smith'],
-//     rating: 3.83,
-//     genres: ['nonfiction', 'essays']
-// },
-// {
-//     title: 'Bone: The Complete Edition',
-//     authors: ['Jeff Smith'],
-//     rating: 4.42,
-//     genres: ['fiction', 'graphic novel', 'fantasy']
-// },
-// {
-//     title: 'American Gods',
-//     authors: ['Neil Gaiman'],
-//     rating: 4.11,
-//     genres: ['fiction', 'fantasy']
-// },
-// {
-//     title: 'A Gentleman in Moscow',
-//     authors: ['Amor Towles'],
-//     rating: 4.36,
-//     genres: ['fiction', 'historical fiction']
-// },
-// {
-//     title: 'The Name of the Wind',
-//     authors: ['Patrick Rothfuss'],
-//     rating: 4.54,
-//     genres: ['fiction', 'fantasy']
-// },
-// {
-//     title: 'The Overstory',
-//     authors: ['Richard Powers'],
-//     rating: 4.19,
-//     genres: ['fiction', 'short stories']
-// },
-// {
-//     title: 'A Truly Horrible Book',
-//     authors: ['Xavier Time'],
-//     rating: 2.18,
-//     genres: ['fiction', 'garbage']
-// },
-// {
-//     title: 'The Way of Kings',
-//     authors: ['Brandon Sanderson'],
-//     rating: 4.65,
-//     genres: ['fantasy', 'epic']
-// },
-// {
-//     title: 'Lord of the flies',
-//     authors: ['William Golding'],
-//     rating: 3.67,
-//     genres: ['fiction']
-// }
-// ]
 
 // const results = books.reduce((preVal, currVal) => {
 //     const rating =Math.floor(currVal.rating)
@@ -240,13 +179,11 @@ const votes = ['y', 'y', 'n', 'n', 'y', 'n', 'y', 'y', 'y', 'n', 'n', 'y', 'n']
 //     else{
 //         preVal[rating] = []
 //     }
-   
 //     return preVal
 // }, {})
 
 // console.log(results)
 
-// const arr = [100, 1, 24, 15, 10, 2, 5, 23, 1, 0, 19]
 // console.log(array.sort((x, y) => {
 //     return x-y
 // }))
@@ -267,3 +204,133 @@ const votes = ['y', 'y', 'n', 'n', 'y', 'n', 'y', 'y', 'y', 'n', 'n', 'y', 'n']
 // console.log(sorted)
 
 //[100]1
+
+// const arr3 = [[1, 2 ,3], 
+//             [4, 5 ,6], 
+//             [7,8, 9]]
+// // const afunc = function (...arr) {
+// //    return  
+// // }
+
+
+
+// console.log()
+
+// const bla = function (a,b,c,d) {
+//     console.log(a,b,c,d)
+// }
+
+// console.log(...'niraj')
+
+
+
+// const name2 = {4: "one", 5: "two", 6: "three"}
+
+// // console.log({...name, 4: "four", ...name2})
+
+
+
+// const name3 = {
+//     1: {...name}
+// }
+
+// console.log({arr})
+
+
+//preVal = {},  [1, 2, 3]
+// const rest = function (...nums) {
+//     return nums.reduce((preVal, currVal) => {
+//         if (!preVal[currVal]){
+//             preVal[currVal]= currVal
+//         }
+//       return preVal
+
+//     }, {})
+
+// }
+
+// console.log(rest(1,2, 3, 1))
+
+const name = { one: "one", two: "two", three: "three" }
+
+
+// const arr = [100, 1, 24, 15, 10, 2, 5, 23, 1, 0, 19]
+
+
+
+// function name(a, b, ...num){
+//     console.log(a, b)
+//     console.log(num)
+// }
+
+
+const books = [{
+    title: 'Good Omens',
+    authors: ['Terry Pratchett', 'Neil Gaiman'],
+    rating: 4.25,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'Changing My Mind',
+    authors: ['Zadie Smith'],
+    rating: 3.83,
+    genres: ['nonfiction', 'essays']
+},
+{
+    title: 'Bone: The Complete Edition',
+    authors: ['Jeff Smith'],
+    rating: 4.42,
+    genres: ['fiction', 'graphic novel', 'fantasy']
+},
+{
+    title: 'American Gods',
+    authors: ['Neil Gaiman'],
+    rating: 4.11,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'A Gentleman in Moscow',
+    authors: ['Amor Towles'],
+    rating: 4.36,
+    genres: ['fiction', 'historical fiction']
+},
+{
+    title: 'The Name of the Wind',
+    authors: ['Patrick Rothfuss'],
+    rating: 4.54,
+    genres: ['fiction', 'fantasy']
+},
+{
+    title: 'The Overstory',
+    authors: ['Richard Powers'],
+    rating: 4.19,
+    genres: ['fiction', 'short stories']
+},
+{
+    title: 'A Truly Horrible Book',
+    authors: ['Xavier Time'],
+    rating: 2.18,
+    genres: ['fiction', 'garbage']
+},
+{
+    title: 'The Way of Kings',
+    authors: ['Brandon Sanderson'],
+    rating: 4.65,
+    genres: ['fantasy', 'epic']
+},
+{
+    title: 'Lord of the flies',
+    authors: ['William Golding'],
+    rating: 3.67,
+    genres: ['fiction']
+}
+]
+
+// const [...nums] = books
+
+// const {...n} = nums
+
+
+const [{title:nira}, ...nums] = books
+console.log(nira)
+
