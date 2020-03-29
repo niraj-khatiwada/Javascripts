@@ -1,10 +1,11 @@
-const url = fetch("https://swapi.co/api/planets/")
-.then((res) => checkStatusAndParse(res))
+const url = axios.get("https://swapi.co/api/planets/")
+.then((res) => {return res})
 
 .then((res) => {
-    const resident = res.results[0].residents[0]
-    const next = res.next
-    return fetch(next)
+    const resident = res.data.results[0].residents[0]
+    console.log(resident)
+    // const next = res.next
+    return axios.get(next)
 })
 
 .then((res) => checkStatusAndParse(res))
@@ -17,12 +18,5 @@ const url = fetch("https://swapi.co/api/planets/")
 })
 
 
-const checkStatusAndParse = function(res) {
-    if (res.ok){
-        return res.json()
-    }  
-    else{
-        throw new Error(`Status code:${res.status}`)
-    }
 
-} 
+
