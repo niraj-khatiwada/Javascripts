@@ -443,28 +443,50 @@
 // })
 
 
-const checkbox = document.querySelector("input[type='checkbox']")
-const div = document.createElement("div")
-div.style.width = "200px"
-div.style.height = "200px"
-div.style.backgroundColor = "blue"
-div.innerText = "Hello World"
-document.body.prepend(div)
-const input = document.querySelector("form > #name")
+// const checkbox = document.querySelector("input[type='checkbox']")
+// const div = document.createElement("div")
+// div.style.width = "200px"
+// div.style.height = "200px"
+// div.style.backgroundColor = "blue"
+// div.innerText = "Hello World"
+// document.body.prepend(div)
+// const input = document.querySelector("form > #name")
 
-checkbox.addEventListener("input", (evt) => {
-    div.innerText = checkbox.checked
-    console.log(evt)
+// checkbox.addEventListener("input", (evt) => {
+//     div.innerText = checkbox.checked
+//     console.log(evt)
 
-})
+// })
 
-const data = {}
-for (let item of [input, checkbox]){
-    item.addEventListener("input", (evt) => {
-    data[`${evt.type} ${evt.target.type} ${evt.target.name} ${evt.timeStamp}`] = item.value
-    })
+// const data = {}
+// for (let item of [input, checkbox]){
+//     item.addEventListener("input", (evt) => {
+//     data[`${evt.type} ${evt.target.type} ${evt.target.name} ${evt.timeStamp}`] = item.value
+//     })
 
-}
+// }
 
 
+// const callstack = function () {
+//     console.log("First function call")
+//     secondFunction()
+// }
 
+// const secondFunction = function(){
+//     console.log("Second Function")
+//     thirdFunction()
+// }
+
+// const thirdFunction = function() {
+//     console.log("Third Function")
+// }
+
+// console.log("ajksbjhsabh", callstack())
+
+
+console.log("First")
+
+setTimeout(function () {
+    alert("akjsbhjasj")
+},3000)
+console.log("Second")
