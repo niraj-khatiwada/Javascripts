@@ -23,6 +23,7 @@ const stopwatchObj = new Stopwatch(resumeButton, pauseButton, timerInput, {
         circle.setAttribute("stroke-dashoffset", `${offset}`); 
     },
     timerComplete() {
+        timerInput.value = ""
         circle.setAttribute("stroke-dashoffset", "0"); 
         part = [];
         console.log("Timer Completed");
