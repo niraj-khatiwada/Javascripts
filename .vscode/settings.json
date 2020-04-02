@@ -38,5 +38,6 @@
     "eslint.alwaysShowStatus": true,
     "editor.quickSuggestionsDelay": 1,
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "standard.trace.server": "messages"
+    "standard.trace.server": "messages",
+    "liveServer.settings.port": 5501
 }
